@@ -1,13 +1,13 @@
 
 import random
 
-N = int(input("Введите N: "))
-pulled_out_barrels = []
+N = int(input("Введите N: ")) # ввод пользователем количества бочонков
+pulled_out_barrels = [] # создание списка для хранения бочонков
 
-while len(pulled_out_barrels) < N:
-    barrel = random.randint(1, N)
-    if barrel not in pulled_out_barrels:
-        pulled_out_barrels.append(barrel)
-        tap = str(input("Введите что угодно и получите случайный бочонок ! "))
-        print("Вытащен бочонок номер " + str(barrel) + " !")
-print("Бочонки кончились, жеребьёвка завершена !")
+while len(pulled_out_barrels) < N: # выполнение цикла, пока бочонков не будет нужное количество
+    barrel = random.randint(1, N) # генерация случайного бочонка в указаных границах
+    if barrel not in pulled_out_barrels: # если такой бочонок раньше не генерировался
+        pulled_out_barrels.append(barrel) # то добавляем его в список вытащеных
+        tap = str(input("Введите что угодно и получите случайный бочонок ! ")) # получаем команду от пользователя забрать бочонок
+        print("Вытащен бочонок номер " + str(barrel) + " !") # выводим сообщение и номер бочонка на экран
+print("Бочонки кончились, жеребьёвка завершена !") # оповещаем об окончании жеребьёвки
